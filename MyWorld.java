@@ -3,9 +3,9 @@ package MyProject;
 public class MyWorld {
 
 	public static void main(String[] args) {
-		System.out.println("My name is Gopika");
-		System.out.println("I am studying in edubridge");
-		System.out.println("My batch number is 8108");
+		//Difference of both lines while executing
+		System.out.println("sum " +2+3);
+		System.out.println(2+3+" sum is");
 	
 
 	}
