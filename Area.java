@@ -1,28 +1,68 @@
-package area;
+package interfacepackage;
+
+import java.util.Scanner;
+
+interface Shape{
+	void area();
+	void input();
+}
+class Square implements Shape{
+
+	int side,ar;
+
+	@Override
+	public void input() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter length of a square");
+		side=sc.nextInt();
+		
+	}
+	
+	@Override
+	public void area() {
+		ar=side*side;
+		System.out.println("Area of Square="+ar);
+		
+	}
+
+}
+
+class Reactangle implements Shape{
+
+	int l,b, ar;
+	@Override
+	public void input() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter length and breadth of a reactangle");
+		l=sc.nextInt();
+		b=sc.nextInt();
+		
+	}
+	@Override
+	public void area() {
+		ar=l*b;
+		System.out.println("Area of reactangle="+ar);
+		
+	}
+
+}
+
+
 
 public class Area {
 
 	public static void main(String[] args) {
-		// Area of rectangle,square,triangle and circle
-		//rectangle
-		    int length=4;
-			int height=10;
-			double area=length*height;
-			System.out.println("Area of rectangle of length "+length+" and height "+height+" is = "+area);
-			//circle
-			int r=4;
-	        double pi = 3.14;
-	        area=pi*r*r;
-	        System.out.println("Area of circle with radius "+r+" is "+area);
-	        //square
-	        int s=11;
-	        area=s*s;
-	        System.out.println("Area of the square with length "+s+" is "+area);
-	        //triangle
-	        float b=5,h =11;
-	        area = ( b*h) / 2 ;
-	        System.out.println("Area of Triangle with breadth "+b+" and height "+h+" is "+area);
 			
+		Shape ob;
+		ob=new Square();
+		ob.input();
+		ob.area();//square area
+		
+		ob=new Reactangle();
+		ob.input();
+		ob.area();
+
+
 	}
 
 }
